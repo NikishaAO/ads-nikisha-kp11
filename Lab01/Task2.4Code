@@ -1,0 +1,31 @@
+using System;
+using static System.Console;
+
+namespace ASD_LR1_Task2._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, dig, num, i2, revi2;
+            n = Convert.ToInt32(ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                num = 0; 
+                i2 = i * i;
+                num = i2;
+                revi2 = 0;
+                while (num > 0)
+                {
+                    dig = num % 10;
+                    revi2 = revi2 * 10 + dig;
+                    num = num / 10;
+                }   
+                if (i2 == revi2)
+                {
+                    WriteLine(i);
+                }
+            }
+        }
+    }
+}
