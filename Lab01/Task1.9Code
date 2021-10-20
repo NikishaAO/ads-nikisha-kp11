@@ -1,0 +1,46 @@
+using System;
+using static System.Console;
+using static System.Math;
+
+namespace ASD_LR1_Task1._9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a, b;
+            double x, y, z;
+            double m, n, ch, zn;
+            WriteLine("Введiть x");
+            x = Convert.ToDouble(ReadLine());
+            WriteLine("Введiть y");
+            y = Convert.ToDouble(ReadLine());
+            WriteLine("Введiть z");
+            z = Convert.ToDouble(ReadLine());
+            m = 1;
+            for(int i = 1; i <= z; i ++)
+            {
+                m *= 1 / y; 
+            }
+            ch = y - Sqrt(Abs(x * x * x));
+            zn = x * x * x + 5 * m + z * z;
+            if(zn < 0)
+            {
+                WriteLine("Введенi данi не входять до ОДЗ");
+            }
+            else
+            {   
+                a = ch / Sqrt(zn);
+                n = 1;
+                for (int i = 1; i <= x; i++)
+                {
+                    n *= 1 / a;
+                }
+                b = Sin(a) + y;
+                WriteLine("a = {0} \nb = {1}", a, b);
+            }
+           
+            
+        }
+    }
+}
