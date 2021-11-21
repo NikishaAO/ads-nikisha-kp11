@@ -1,0 +1,210 @@
+using System;
+using static System.Console;
+
+namespace ASD_LR2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] Matrix;
+            WriteLine("Введiть розмiр матрицi:");
+            int M = Convert.ToInt32(ReadLine());
+            if (M > 0)
+            {
+                WriteLine("Введiть 1 для використання псевдовипадкої матрицi, 2 для контрольної");
+                int choise = Convert.ToInt32(ReadLine());
+                if (choise == 1)
+                {
+                    Matrix = RandomMatrix(M);
+                    WriteMatrix(Matrix);
+                    UnderDiagonal(Matrix);
+                    AboveDiagonal(Matrix);
+                }
+                else if (choise == 2)
+                {
+                    Matrix = ControlMatrix(M);
+                    WriteMatrix(Matrix);
+                    UnderDiagonal(Matrix);
+                    AboveDiagonal(Matrix);
+                }
+                else
+                    WriteLine("Неправильно введені дані");
+            }
+            else
+                WriteLine("Некоректнi данi");
+        }
+
+        static int[,] ControlMatrix(int M)
+        {
+            int[,] Matrix = new int[M, M];
+            int k = 0;
+            for (int i = 0; i < M; i++)
+                for (int j = 0; j < M; j++)
+                {
+                    Matrix[i, j] = k;
+                    k++;
+                }
+
+            return Matrix;
+        }
+        
+        static int[,] RandomMatrix(int M)
+        {
+            int[,] Matrix = new int[M, M];
+            Random rnd = new Random();
+
+            for (int i = 0; i < M; i++)
+                for (int j = 0; j < M; j++)
+                    Matrix[i, j] = rnd.Next(50) ;
+
+            return Matrix;
+        }
+
+        static void WriteMatrix(int[,] arr)
+        {
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                    Write(arr[i, j] + "\t");
+                Write("\n");
+            }
+            Write("\n");   
+        }
+
+        static void UnderDiagonal(int[,] Matrix)
+        {
+            int M = Matrix.GetLength(0);
+            int c = 0;
+            int k = M;
+            int i = 0;
+            int Max = Matrix[M - 1, 1], iMax = M - 1, jMax = 1;
+            int it = 0;
+            while (c <= (M * (M - 1)) / 2)
+            {
+                k--;
+                i = 0;
+                while(i < k)
+                {
+                    Write(Matrix[M-1 - it, 1 + i + 2*it] + "\t");
+                    if (Matrix[M - 1 - it, 1 + i + 2 * it] > Max)
+                    {
+                        Max = Matrix[M - 1 - it, 1 + i + 2 * it];
+                        iMax = M -1 - it;
+                        jMax =  1+i + 2 * it;
+                    }
+                    i++;
+                    c++;
+                }
+                k--;
+                i = 0;
+                if (c == (M * (M - 1)) / 2)
+                    break;
+                
+                while(i < k)
+                {
+                    Write(Matrix[M - 2 - i - it,M - 1 - it] + "\t");
+                    if (Matrix[M - 2 - i - it, M - 1 - it] > Max)
+                    {
+                        Max = Matrix[M - 2 - i - it, M - 1 - it];
+                        iMax = M - 2 - i - it;
+                        jMax = M -1 - it;
+
+                    }
+                    i++;
+                    c++;
+                }
+                k--;
+                i = 0;
+                if (c == (M * (M - 1)) / 2)
+                    break;
+               
+                while(i < k)
+                {
+                    Write(Matrix[2 + 2*it + i, M - 2 - it - i] + "\t");
+                    if (Matrix[2 + 2 * it + i, M - 2 - it - i] > Max)
+                    {
+                        Max = Matrix[2 + 2 * it + i, M - 2 - it - i];
+                        iMax = 2 + 2 * it + i;
+                        jMax = M - 2 - it - i;
+                    }
+                    i++;
+                    c++;
+                }             
+                it++;
+
+            }
+            WriteLine("Max element = {0} at position [{1},{2}]", Max, iMax+1, jMax+1);
+        }
+
+        static void AboveDiagonal(int[,] Matrix)
+        {
+            int M = Matrix.GetLength(0);
+            int c = 0;
+            int k = M;
+            int i = 0;
+            int Min = Matrix[i, M - 1 - i], iMin = i, jMin = M - 1 - i ;
+            int it = 0;
+            while(c <= (Matrix.Length - ((M * (M-1) / 2))))
+            { 
+                while(i < k)
+                {
+                    Write(Matrix[i + it, M - 1 -i - 2 * it] + "\t");
+                    if (Matrix[i + it, M - 1 - i - 2 * it] < Min)
+                    {
+                        Min = Matrix[i + it, M - 1 - i - 2 * it];
+                        iMin = i + it;
+                        jMin = M - 1- i - 2 * it;
+                    }
+                    i++;    
+                    c++;
+                }
+                k--;
+                i = 0;
+
+                if (c == (Matrix.Length - ((M * (M - 1) / 2))))
+                    break;
+
+                while(i < k)
+                {
+                    Write(Matrix[M - 2 - i - 2*it,it] +  "\t");
+                    if (Matrix[M - 2 - i - 2*it, it] < Min)
+                    {
+                        Min = Matrix[M - 2 - i - 2*it, it];
+                        iMin = M -2 - i - 2 * it;
+                        jMin = it;
+                    }
+                    i++;
+                    c++;
+
+
+                }
+                k--;
+                i = 0;
+
+
+                if (c == (Matrix.Length - ((M * (M - 1) / 2))))
+                    break;
+
+                while (i < k)
+                {
+                    Write(Matrix[it, it + 1 + i] + "\t");
+                    if (Matrix[it, it + 1 + i] < Min)
+                    {
+                        Min = Matrix[it, it + 1 + i];
+                        iMin = it;
+                        jMin = it + 1 + i;
+                    }
+                    i++;
+                    c++;
+                }
+                k--;
+                i = 0;
+                it++;
+
+            }
+            WriteLine("Min element = {0} at position [{1},{2}]", Min, iMin+1, jMin+1) ;
+
+        }
+    }
+}
