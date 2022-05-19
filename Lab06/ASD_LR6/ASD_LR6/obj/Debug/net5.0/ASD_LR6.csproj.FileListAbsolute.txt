@@ -1,0 +1,16 @@
+D:\prog\ASD_LR6\ASD_LR6\bin\Debug\net5.0\ASD_LR6.exe
+D:\prog\ASD_LR6\ASD_LR6\bin\Debug\net5.0\ASD_LR6.deps.json
+D:\prog\ASD_LR6\ASD_LR6\bin\Debug\net5.0\ASD_LR6.runtimeconfig.json
+D:\prog\ASD_LR6\ASD_LR6\bin\Debug\net5.0\ASD_LR6.runtimeconfig.dev.json
+D:\prog\ASD_LR6\ASD_LR6\bin\Debug\net5.0\ASD_LR6.dll
+D:\prog\ASD_LR6\ASD_LR6\bin\Debug\net5.0\ref\ASD_LR6.dll
+D:\prog\ASD_LR6\ASD_LR6\bin\Debug\net5.0\ASD_LR6.pdb
+D:\prog\ASD_LR6\ASD_LR6\obj\Debug\net5.0\ASD_LR6.csproj.AssemblyReference.cache
+D:\prog\ASD_LR6\ASD_LR6\obj\Debug\net5.0\ASD_LR6.GeneratedMSBuildEditorConfig.editorconfig
+D:\prog\ASD_LR6\ASD_LR6\obj\Debug\net5.0\ASD_LR6.AssemblyInfoInputs.cache
+D:\prog\ASD_LR6\ASD_LR6\obj\Debug\net5.0\ASD_LR6.AssemblyInfo.cs
+D:\prog\ASD_LR6\ASD_LR6\obj\Debug\net5.0\ASD_LR6.csproj.CoreCompileInputs.cache
+D:\prog\ASD_LR6\ASD_LR6\obj\Debug\net5.0\ASD_LR6.dll
+D:\prog\ASD_LR6\ASD_LR6\obj\Debug\net5.0\ref\ASD_LR6.dll
+D:\prog\ASD_LR6\ASD_LR6\obj\Debug\net5.0\ASD_LR6.pdb
+D:\prog\ASD_LR6\ASD_LR6\obj\Debug\net5.0\ASD_LR6.genruntimeconfig.cache
