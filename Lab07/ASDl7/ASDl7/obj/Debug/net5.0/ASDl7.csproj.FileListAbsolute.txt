@@ -1,0 +1,16 @@
+D:\prog\ASDl7\ASDl7\bin\Debug\net5.0\ASDl7.exe
+D:\prog\ASDl7\ASDl7\bin\Debug\net5.0\ASDl7.deps.json
+D:\prog\ASDl7\ASDl7\bin\Debug\net5.0\ASDl7.runtimeconfig.json
+D:\prog\ASDl7\ASDl7\bin\Debug\net5.0\ASDl7.runtimeconfig.dev.json
+D:\prog\ASDl7\ASDl7\bin\Debug\net5.0\ASDl7.dll
+D:\prog\ASDl7\ASDl7\bin\Debug\net5.0\ref\ASDl7.dll
+D:\prog\ASDl7\ASDl7\bin\Debug\net5.0\ASDl7.pdb
+D:\prog\ASDl7\ASDl7\obj\Debug\net5.0\ASDl7.csproj.AssemblyReference.cache
+D:\prog\ASDl7\ASDl7\obj\Debug\net5.0\ASDl7.GeneratedMSBuildEditorConfig.editorconfig
+D:\prog\ASDl7\ASDl7\obj\Debug\net5.0\ASDl7.AssemblyInfoInputs.cache
+D:\prog\ASDl7\ASDl7\obj\Debug\net5.0\ASDl7.AssemblyInfo.cs
+D:\prog\ASDl7\ASDl7\obj\Debug\net5.0\ASDl7.csproj.CoreCompileInputs.cache
+D:\prog\ASDl7\ASDl7\obj\Debug\net5.0\ASDl7.dll
+D:\prog\ASDl7\ASDl7\obj\Debug\net5.0\ref\ASDl7.dll
+D:\prog\ASDl7\ASDl7\obj\Debug\net5.0\ASDl7.pdb
+D:\prog\ASDl7\ASDl7\obj\Debug\net5.0\ASDl7.genruntimeconfig.cache
